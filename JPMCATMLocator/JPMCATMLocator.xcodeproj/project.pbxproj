@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448BB7463B338A889FFBEAD0 /* Pods_JPMCATMLocator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0180FFBB7A760BAA780EC06A /* Pods_JPMCATMLocator.framework */; };
+		49A9D4F90AE5AFCA9CB104C7 /* Pods_JPMCATMLocatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F290D9BCB7F384183909DCED /* Pods_JPMCATMLocatorTests.framework */; };
 		B2F62C7F2022356700291A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62C7E2022356700291A7E /* AppDelegate.swift */; };
-		B2F62C812022356700291A7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62C802022356700291A7E /* ViewController.swift */; };
+		B2F62C812022356700291A7E /* ATMLocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62C802022356700291A7E /* ATMLocatorViewController.swift */; };
 		B2F62C842022356700291A7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F62C822022356700291A7E /* Main.storyboard */; };
 		B2F62C862022356700291A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F62C852022356700291A7E /* Assets.xcassets */; };
 		B2F62C892022356700291A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F62C872022356700291A7E /* LaunchScreen.storyboard */; };
 		B2F62C942022356700291A7E /* JPMCATMLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62C932022356700291A7E /* JPMCATMLocatorTests.swift */; };
 		B2F62C9F2022356700291A7E /* JPMCATMLocatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62C9E2022356700291A7E /* JPMCATMLocatorUITests.swift */; };
 		B2F62CB62022360600291A7E /* ProjectWorldFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F62CB2202235F100291A7E /* ProjectWorldFramework.framework */; };
+		B2F62CBC2022629100291A7E /* ATMLocatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CBB2022629100291A7E /* ATMLocatorViewModel.swift */; };
+		B2F62CC82022666F00291A7E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F62CC72022666F00291A7E /* CoreLocation.framework */; };
+		B2F62CCA20226F2000291A7E /* ATMLocatorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CC920226F2000291A7E /* ATMLocatorConstants.swift */; };
+		B2F62CCC2022825700291A7E /* ATMLocatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CCB2022825700291A7E /* ATMLocatorResponse.swift */; };
+		EE26A59A34581CFF91A7309A /* Pods_JPMCATMLocatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AD8F3F3B1848062A75898D /* Pods_JPMCATMLocatorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0180FFBB7A760BAA780EC06A /* Pods_JPMCATMLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPMCATMLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DE07D2DAC9F8D89B39BF9D /* Pods-JPMCATMLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocator/Pods-JPMCATMLocator.debug.xcconfig"; sourceTree = "<group>"; };
+		61C9462C75294BC8B20487BF /* Pods-JPMCATMLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocator/Pods-JPMCATMLocator.release.xcconfig"; sourceTree = "<group>"; };
+		77893BABD9BBAB88F1485AA9 /* Pods-JPMCATMLocatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocatorUITests/Pods-JPMCATMLocatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E12BF999693FB9A516DFF57 /* Pods-JPMCATMLocatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocatorTests/Pods-JPMCATMLocatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4AD8F3F3B1848062A75898D /* Pods_JPMCATMLocatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPMCATMLocatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F62C7B2022356700291A7E /* JPMCATMLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPMCATMLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F62C7E2022356700291A7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2F62C802022356700291A7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2F62C802022356700291A7E /* ATMLocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorViewController.swift; sourceTree = "<group>"; };
 		B2F62C832022356700291A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2F62C852022356700291A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F62C882022356700291A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +76,13 @@
 		B2F62C9E2022356700291A7E /* JPMCATMLocatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPMCATMLocatorUITests.swift; sourceTree = "<group>"; };
 		B2F62CA02022356700291A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F62CAC202235F100291A7E /* ProjectWorldFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProjectWorldFramework.xcodeproj; path = ../ProjectWorldFramework/ProjectWorldFramework.xcodeproj; sourceTree = "<group>"; };
+		B2F62CBB2022629100291A7E /* ATMLocatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorViewModel.swift; sourceTree = "<group>"; };
+		B2F62CC72022666F00291A7E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B2F62CC920226F2000291A7E /* ATMLocatorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorConstants.swift; sourceTree = "<group>"; };
+		B2F62CCB2022825700291A7E /* ATMLocatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorResponse.swift; sourceTree = "<group>"; };
+		DD8C0CA137567579586D4D7D /* Pods-JPMCATMLocatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocatorTests/Pods-JPMCATMLocatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		F290D9BCB7F384183909DCED /* Pods_JPMCATMLocatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPMCATMLocatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F5F82A49A6243792D030BE /* Pods-JPMCATMLocatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocatorUITests/Pods-JPMCATMLocatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F62CC82022666F00291A7E /* CoreLocation.framework in Frameworks */,
 				B2F62CB62022360600291A7E /* ProjectWorldFramework.framework in Frameworks */,
+				448BB7463B338A889FFBEAD0 /* Pods_JPMCATMLocator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A9D4F90AE5AFCA9CB104C7 /* Pods_JPMCATMLocatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +108,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE26A59A34581CFF91A7309A /* Pods_JPMCATMLocatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B4FF1C31B731C394A85F8D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23DE07D2DAC9F8D89B39BF9D /* Pods-JPMCATMLocator.debug.xcconfig */,
+				61C9462C75294BC8B20487BF /* Pods-JPMCATMLocator.release.xcconfig */,
+				7E12BF999693FB9A516DFF57 /* Pods-JPMCATMLocatorTests.debug.xcconfig */,
+				DD8C0CA137567579586D4D7D /* Pods-JPMCATMLocatorTests.release.xcconfig */,
+				F2F5F82A49A6243792D030BE /* Pods-JPMCATMLocatorUITests.debug.xcconfig */,
+				77893BABD9BBAB88F1485AA9 /* Pods-JPMCATMLocatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B2F62C722022356700291A7E = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +137,7 @@
 				B2F62C7C2022356700291A7E /* Products */,
 				B2F62CAC202235F100291A7E /* ProjectWorldFramework.xcodeproj */,
 				B2F62CB52022360600291A7E /* Frameworks */,
+				9B4FF1C31B731C394A85F8D1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,8 +154,8 @@
 		B2F62C7D2022356700291A7E /* JPMCATMLocator */ = {
 			isa = PBXGroup;
 			children = (
+				B2F62CBD202263B300291A7E /* source */,
 				B2F62C7E2022356700291A7E /* AppDelegate.swift */,
-				B2F62C802022356700291A7E /* ViewController.swift */,
 				B2F62C822022356700291A7E /* Main.storyboard */,
 				B2F62C852022356700291A7E /* Assets.xcassets */,
 				B2F62C872022356700291A7E /* LaunchScreen.storyboard */,
@@ -156,8 +194,95 @@
 		B2F62CB52022360600291A7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2F62CC72022666F00291A7E /* CoreLocation.framework */,
+				0180FFBB7A760BAA780EC06A /* Pods_JPMCATMLocator.framework */,
+				F290D9BCB7F384183909DCED /* Pods_JPMCATMLocatorTests.framework */,
+				A4AD8F3F3B1848062A75898D /* Pods_JPMCATMLocatorUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2F62CBD202263B300291A7E /* source */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CBE202263B900291A7E /* com */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		B2F62CBE202263B900291A7E /* com */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CBF202263C600291A7E /* locationServices */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		B2F62CBF202263C600291A7E /* locationServices */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CC02022640900291A7E /* model */,
+				B2F62CC22022642B00291A7E /* view */,
+				B2F62CC12022641A00291A7E /* viewModel */,
+				B2F62CC62022649500291A7E /* util */,
+				B2F62CC52022648A00291A7E /* serviceInvoker */,
+			);
+			path = locationServices;
+			sourceTree = "<group>";
+		};
+		B2F62CC02022640900291A7E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CCB2022825700291A7E /* ATMLocatorResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B2F62CC12022641A00291A7E /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CBB2022629100291A7E /* ATMLocatorViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B2F62CC22022642B00291A7E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62C802022356700291A7E /* ATMLocatorViewController.swift */,
+				B2F62CC32022646100291A7E /* tableView */,
+				B2F62CC42022646C00291A7E /* tableViewCell */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B2F62CC32022646100291A7E /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		B2F62CC42022646C00291A7E /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		B2F62CC52022648A00291A7E /* serviceInvoker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = serviceInvoker;
+			sourceTree = "<group>";
+		};
+		B2F62CC62022649500291A7E /* util */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CC920226F2000291A7E /* ATMLocatorConstants.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F62CA32022356700291A7E /* Build configuration list for PBXNativeTarget "JPMCATMLocator" */;
 			buildPhases = (
+				C5B15A4479063670BECD3FD2 /* [CP] Check Pods Manifest.lock */,
 				B2F62C772022356700291A7E /* Sources */,
 				B2F62C782022356700291A7E /* Frameworks */,
 				B2F62C792022356700291A7E /* Resources */,
+				0EF84FB754C417D1047DCFB2 /* [CP] Embed Pods Frameworks */,
+				36A9B2386C315A160AD8DC34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F62CA62022356700291A7E /* Build configuration list for PBXNativeTarget "JPMCATMLocatorTests" */;
 			buildPhases = (
+				680A37615BE1DA263F6D08DA /* [CP] Check Pods Manifest.lock */,
 				B2F62C8B2022356700291A7E /* Sources */,
 				B2F62C8C2022356700291A7E /* Frameworks */,
 				B2F62C8D2022356700291A7E /* Resources */,
+				A7994B4ECF5791D89B583E1A /* [CP] Embed Pods Frameworks */,
+				6CC2E9105AC52B44A5F3C5A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,9 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F62CA92022356700291A7E /* Build configuration list for PBXNativeTarget "JPMCATMLocatorUITests" */;
 			buildPhases = (
+				9852096E3BCEFDD54021B240 /* [CP] Check Pods Manifest.lock */,
 				B2F62C962022356700291A7E /* Sources */,
 				B2F62C972022356700291A7E /* Frameworks */,
 				B2F62C982022356700291A7E /* Resources */,
+				DEF5692324994DCE8AB0C5DB /* [CP] Embed Pods Frameworks */,
+				D187EDFAED36BF6BF16109E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,13 +446,167 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EF84FB754C417D1047DCFB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocator/Pods-JPMCATMLocator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36A9B2386C315A160AD8DC34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocator/Pods-JPMCATMLocator-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocator/Pods-JPMCATMLocator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		680A37615BE1DA263F6D08DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JPMCATMLocatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CC2E9105AC52B44A5F3C5A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocatorTests/Pods-JPMCATMLocatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9852096E3BCEFDD54021B240 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JPMCATMLocatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7994B4ECF5791D89B583E1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocatorTests/Pods-JPMCATMLocatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B15A4479063670BECD3FD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JPMCATMLocator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D187EDFAED36BF6BF16109E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocatorUITests/Pods-JPMCATMLocatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF5692324994DCE8AB0C5DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPMCATMLocatorUITests/Pods-JPMCATMLocatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2F62C772022356700291A7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F62C812022356700291A7E /* ViewController.swift in Sources */,
+				B2F62CBC2022629100291A7E /* ATMLocatorViewModel.swift in Sources */,
+				B2F62C812022356700291A7E /* ATMLocatorViewController.swift in Sources */,
 				B2F62C7F2022356700291A7E /* AppDelegate.swift in Sources */,
+				B2F62CCC2022825700291A7E /* ATMLocatorResponse.swift in Sources */,
+				B2F62CCA20226F2000291A7E /* ATMLocatorConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +770,7 @@
 		};
 		B2F62CA42022356700291A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DE07D2DAC9F8D89B39BF9D /* Pods-JPMCATMLocator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -497,6 +786,7 @@
 		};
 		B2F62CA52022356700291A7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61C9462C75294BC8B20487BF /* Pods-JPMCATMLocator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +802,7 @@
 		};
 		B2F62CA72022356700291A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E12BF999693FB9A516DFF57 /* Pods-JPMCATMLocatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,6 +820,7 @@
 		};
 		B2F62CA82022356700291A7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8C0CA137567579586D4D7D /* Pods-JPMCATMLocatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,6 +838,7 @@
 		};
 		B2F62CAA2022356700291A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F5F82A49A6243792D030BE /* Pods-JPMCATMLocatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -562,6 +855,7 @@
 		};
 		B2F62CAB2022356700291A7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77893BABD9BBAB88F1485AA9 /* Pods-JPMCATMLocatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

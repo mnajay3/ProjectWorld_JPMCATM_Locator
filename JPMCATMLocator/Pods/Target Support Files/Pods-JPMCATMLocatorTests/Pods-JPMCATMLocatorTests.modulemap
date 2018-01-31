@@ -1,0 +1,6 @@
+framework module Pods_JPMCATMLocatorTests {
+  umbrella header "Pods-JPMCATMLocatorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
