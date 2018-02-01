@@ -25,6 +25,8 @@
 		B2F62CD12022C7D500291A7E /* ATMLocatorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CD02022C7D500291A7E /* ATMLocatorDetailViewModel.swift */; };
 		B2F62CD32022C8ED00291A7E /* JPMCInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F62CD22022C8ED00291A7E /* JPMCInfo.plist */; };
 		B2F62CD62022DEEE00291A7E /* ATMLocatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CD52022DEEE00291A7E /* ATMLocatorExtensions.swift */; };
+		B2F62CD72022EEE000291A7E /* ProjectWorldFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F62CB2202235F100291A7E /* ProjectWorldFramework.framework */; };
+		B2F62CD82022EEE000291A7E /* ProjectWorldFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2F62CB2202235F100291A7E /* ProjectWorldFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE26A59A34581CFF91A7309A /* Pods_JPMCATMLocatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AD8F3F3B1848062A75898D /* Pods_JPMCATMLocatorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +59,28 @@
 			remoteGlobalIDString = B202DEAE1F7C9BCA00DBD837;
 			remoteInfo = ProjectWorldFrameworkTests;
 		};
+		B2F62CD92022EEE000291A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2F62CAC202235F100291A7E /* ProjectWorldFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B202DEA41F7C9BCA00DBD837;
+			remoteInfo = ProjectWorldFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2F62CDB2022EEE000291A7E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2F62CD82022EEE000291A7E /* ProjectWorldFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0180FFBB7A760BAA780EC06A /* Pods_JPMCATMLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPMCATMLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F62CD72022EEE000291A7E /* ProjectWorldFramework.framework in Frameworks */,
 				B2F62CC82022666F00291A7E /* CoreLocation.framework in Frameworks */,
 				B2F62CB62022360600291A7E /* ProjectWorldFramework.framework in Frameworks */,
 				448BB7463B338A889FFBEAD0 /* Pods_JPMCATMLocator.framework in Frameworks */,
@@ -230,10 +254,10 @@
 		B2F62CBF202263C600291A7E /* locationServices */ = {
 			isa = PBXGroup;
 			children = (
-				B2F62CD42022DED100291A7E /* extensions */,
 				B2F62CC02022640900291A7E /* model */,
 				B2F62CC22022642B00291A7E /* view */,
 				B2F62CC12022641A00291A7E /* viewModel */,
+				B2F62CD42022DED100291A7E /* extensions */,
 				B2F62CC62022649500291A7E /* util */,
 			);
 			path = locationServices;
@@ -310,10 +334,12 @@
 				B2F62C792022356700291A7E /* Resources */,
 				0EF84FB754C417D1047DCFB2 /* [CP] Embed Pods Frameworks */,
 				36A9B2386C315A160AD8DC34 /* [CP] Copy Pods Resources */,
+				B2F62CDB2022EEE000291A7E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B2F62CDA2022EEE000291A7E /* PBXTargetDependency */,
 			);
 			name = JPMCATMLocator;
 			productName = JPMCATMLocator;
@@ -655,6 +681,11 @@
 			target = B2F62C7A2022356700291A7E /* JPMCATMLocator */;
 			targetProxy = B2F62C9B2022356700291A7E /* PBXContainerItemProxy */;
 		};
+		B2F62CDA2022EEE000291A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ProjectWorldFramework;
+			targetProxy = B2F62CD92022EEE000291A7E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -788,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23DE07D2DAC9F8D89B39BF9D /* Pods-JPMCATMLocator.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49CHWC455N;
@@ -804,6 +836,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61C9462C75294BC8B20487BF /* Pods-JPMCATMLocator.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49CHWC455N;

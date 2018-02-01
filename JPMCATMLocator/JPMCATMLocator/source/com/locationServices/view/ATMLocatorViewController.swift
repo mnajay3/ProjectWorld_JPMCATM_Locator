@@ -6,6 +6,19 @@
 //  Copyright © 2018 Naga Murala. All rights reserved.
 //
 
+
+/**********************************************************************************
+ The project follows MVVM design pattern. I puposefully made the viewModel
+ tightly coupled to the view(controller).
+ It uses CoreLocation api to fetch the current location latitude and
+ longitude and pass it to GoogleMaps api to render the marker in GMAPS.
+ This will just invoke the view model to fetch location data from network,
+ inturn view model holds all the network response it passes to view to
+ render in UI whenever the view required.
+ This View(controller) doesn't know any thing about how the network is getting
+ called, how the data is getting parse. It just bothers about the data whenever it
+ requires.
+ **********************************************************************************/
 import UIKit
 import ProjectWorldFramework
 import CoreLocation
@@ -46,7 +59,6 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
         //Let viewModel deal with fetching the latitude and longitude values and hold them. As a view(controller), ask view model to provide the values when it is needed
         viewModel.fetchNearbyLocations(locationManager: self.locationManager)
         {
-            print("Hi Ajay: Executing after the network response fetch", self.viewModel.locationResponse ?? "Response not available")
             self.displayNearByATMLocationsInGMAPS()
         }
         //Make sure to stop updating the location other wise it keeps on sending the locationd details
@@ -110,7 +122,6 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
     //PRAGMARK:- DelegateMethods: GMSViewDelegate
     //Triggers when user taps on the location title window on top of the marker
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        print("Hi Ajay: didTapInfoWindowOf")
         self.initializeSceneConfig(bundle: nil)
         if marker.title == CURRENT_LOCATION {
             return

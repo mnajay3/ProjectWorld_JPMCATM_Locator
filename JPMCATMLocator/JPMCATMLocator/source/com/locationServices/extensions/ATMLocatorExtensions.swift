@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+/*******************************************************************
+ This is an extension to ATMLocatorDetailController, It is responsible
+ to add constraints to all custom views..
+ ********************************************************************/
 extension ATMLocatorDetailController {
     
     //MARK:- Instance Methods

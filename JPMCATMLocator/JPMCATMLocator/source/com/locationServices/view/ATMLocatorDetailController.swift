@@ -5,6 +5,11 @@
 //  Created by Naga Murala on 1/31/18.
 //  Copyright © 2018 Naga Murala. All rights reserved.
 //
+//This controller will be responsible for rendering location details when user clicks the near by atm's marker.
+//In fact here I am following, MVVM design pattern and locatorDetail as viewModel. As viewModel is obvious, I made it as tightly coupled
+//
+//I am aware that using storyboard & autolayouts are bit easy but the reason some times I prefer custom views is to make a relation ship with programming code. We have other instances we would prefer custom views when multiple persons are working on same storyboards(to avoid un resolvable conflicts)
+//
 
 import UIKit
 import ProjectWorldFramework
@@ -12,7 +17,7 @@ import ProjectWorldFramework
 class ATMLocatorDetailController: MasterViewController {
     @IBOutlet var locatorDetail: ATMLocatorDetailViewModel!
     
-    
+
     let controlView: UIView = {
         let cv = UIView()
         cv.translatesAutoresizingMaskIntoConstraints = false
@@ -113,6 +118,7 @@ class ATMLocatorDetailController: MasterViewController {
     }()
     
     //MARK:- View Controller overriden methods
+    //Adding all the views to the parent view to render location information
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.24, green: 0.49, blue: 0.55, alpha: 1.0)
@@ -124,6 +130,7 @@ class ATMLocatorDetailController: MasterViewController {
     }
     
     //MARK:- EventDelegationModel: @objc methods
+    //Dismiss the current view from heirarchy
     @objc func handleDoneEvent() {
         dismiss(animated: true, completion: nil)
     }
