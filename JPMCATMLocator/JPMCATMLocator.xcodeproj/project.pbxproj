@@ -285,24 +285,8 @@
 			children = (
 				B2F62C802022356700291A7E /* ATMLocatorViewController.swift */,
 				B2F62CCE2022C69200291A7E /* ATMLocatorDetailController.swift */,
-				B2F62CC32022646100291A7E /* tableView */,
-				B2F62CC42022646C00291A7E /* tableViewCell */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		B2F62CC32022646100291A7E /* tableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tableView;
-			sourceTree = "<group>";
-		};
-		B2F62CC42022646C00291A7E /* tableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tableViewCell;
 			sourceTree = "<group>";
 		};
 		B2F62CC62022649500291A7E /* util */ = {

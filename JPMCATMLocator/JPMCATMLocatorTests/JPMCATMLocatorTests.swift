@@ -8,10 +8,12 @@
 
 import XCTest
 @testable import JPMCATMLocator
+@testable import ProjectWorldFramework
 
 class JPMCATMLocatorTests: XCTestCase {
     var locatorController = ATMLocatorViewController()
     var locatorViewModel = ATMLocatorViewModel()
+    var response: ATMLocatorResponse?
     
     override func setUp() {
         super.setUp()
@@ -44,13 +46,12 @@ class JPMCATMLocatorTests: XCTestCase {
     }
     
     func testNetworkResponse() {
-        var response : ATMLocatorResponse?
         let url = locatorController.viewModel.prepareURL()
         let expected = expectation(description: "Chase serive does some stuff in background thread and runs the call back")
         locatorController.viewModel.invokeServiceWithURL(url: url) {
 //            XCTAssertTrue(self.locatorController.viewModel.locationResponse != nil)
-            response = self.locatorController.viewModel.locationResponse
-            XCTAssertTrue(response != nil)
+            self.response = self.locatorController.viewModel.locationResponse
+            XCTAssertTrue(self.response != nil)
             expected.fulfill()
 //            self.expectation(description: expected.description).fulfill()
         }
@@ -58,6 +59,22 @@ class JPMCATMLocatorTests: XCTestCase {
             if let error = error {
                 XCTFail("Wait for expectation time out and error occured:\(error)")
             }
+        }
+    }
+    
+    func testResponseObjectIsValid() {
+        testNetworkResponse()
+        if (response != nil) {
+            for location in (response?.locations)! {
+                if location.lat.toDouble() == 0.00 || location.lng.toDouble() == 0.00
+                {
+                    XCTFail("Latitude/Longitude values in the response is not valid")
+                }
+            }
+            XCTAssertTrue(true)
+        }
+        else {
+            XCTFail("Please make sure to to run testNetworkResponse() test case before this test case")
         }
     }
  
