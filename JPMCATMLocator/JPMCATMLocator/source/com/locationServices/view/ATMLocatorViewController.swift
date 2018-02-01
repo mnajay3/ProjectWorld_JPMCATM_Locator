@@ -41,6 +41,7 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
         viewModel.fetchNearbyLocations(locationManager: self.locationManager)
         {
             print("Hi Ajay: Executing after the network response fetch", self.viewModel.locationResponse ?? "Response not available")
+            self.displayNearByATMLocationsInGMAPS()
         }
         //Make sure to stop updating the location other wise it keeps on sending the locationd details
         locationManager.stopUpdatingLocation()
@@ -71,6 +72,32 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
         let marker = GMSMarker(position: locationCoordinate)
         marker.appearAnimation = .pop
         marker.title = CURRENT_LOCATION
+        marker.map = mapView
+    }
+    //This method will iterate through the location response - ATMLocations array and calls subsequent method to render the markers in GMAPS
+    func displayNearByATMLocationsInGMAPS() {
+        guard let locations = self.viewModel.locationResponse?.locations else { return }
+        for location in locations {
+            renderNearByATMLocationsWithAnimation(location: location)
+        }
+    }
+    //This method will display each and every location as a marker in GMAPS by using CATransaction animations
+    func renderNearByATMLocationsWithAnimation(location: ATMLocation) {
+        //Invoke animation
+        CATransaction.begin()
+        //Set the delay of animation duration
+        CATransaction.setValue(2, forKey: kCATransactionAnimationDuration)
+        //location to location animation transition occures with the above delay
+        //Camera position will goto the location to display the marker at provided location
+        mapView?.animate(to: GMSCameraPosition.camera(withLatitude: (location.lat).toDouble(), longitude: (location.lng).toDouble(), zoom: 14))
+        //Commit the animation
+        CATransaction.commit()
+        
+        //This is just to show the marker on top of each location
+        let locationCoordinate = CLLocationCoordinate2DMake((location.lat).toDouble(), (location.lng).toDouble())
+        let marker = GMSMarker(position: locationCoordinate)
+        marker.appearAnimation = .pop
+        marker.title = location.name
         marker.map = mapView
     }
     
