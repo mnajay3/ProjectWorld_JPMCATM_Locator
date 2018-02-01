@@ -31,11 +31,14 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
     //PRAGMARK:- ViewController overriden methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.statusBarView?.isHidden = true
         self.pageName = "ATMLocatorViewController"
         self.segueAlias = "ATMLocatorSegue"
         //Set the locationManager delegate to self, to kickoff delegate methods when location changed
         self.locationManager.delegate = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarView?.isHidden = true
     }
     
     //PRAGMARK:- Delegate methods: CLLocationManger
@@ -109,6 +112,9 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         print("Hi Ajay: didTapInfoWindowOf")
         self.initializeSceneConfig(bundle: nil)
+        if marker.title == CURRENT_LOCATION {
+            return
+        }
         guard let locations = self.viewModel.locationResponse?.locations else { return }
         for location in locations {
             if location.lat.toDouble() == marker.layer.latitude, location.lng.toDouble() == marker.layer.longitude {
