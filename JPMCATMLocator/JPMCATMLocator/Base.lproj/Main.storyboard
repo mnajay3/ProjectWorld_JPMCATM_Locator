@@ -28,5 +28,24 @@
                 <customObject id="DA1-uY-flD" customClass="ATMLocatorViewModel" customModule="JPMCATMLocator" customModuleProvider="target"/>
             </objects>
         </scene>
+        <!--Locator Detail Controller-->
+        <scene sceneID="esb-fy-veg">
+            <objects>
+                <viewController storyboardIdentifier="chaseLocationDetail" id="oqB-Il-lz9" customClass="ATMLocatorDetailController" customModule="JPMCATMLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ypI-Hb-zGp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EtC-eY-Vlg"/>
+                    </view>
+                    <connections>
+                        <outlet property="locatorDetail" destination="kq7-Og-O2U" id="pT5-3H-Rc2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ph-uQ-vGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="kq7-Og-O2U" customClass="ATMLocatorDetailViewModel" customModule="JPMCATMLocator" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="32"/>
+        </scene>
     </scenes>
 </document>

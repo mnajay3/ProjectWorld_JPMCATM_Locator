@@ -21,6 +21,10 @@
 		B2F62CC82022666F00291A7E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F62CC72022666F00291A7E /* CoreLocation.framework */; };
 		B2F62CCA20226F2000291A7E /* ATMLocatorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CC920226F2000291A7E /* ATMLocatorConstants.swift */; };
 		B2F62CCC2022825700291A7E /* ATMLocatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CCB2022825700291A7E /* ATMLocatorResponse.swift */; };
+		B2F62CCF2022C69200291A7E /* ATMLocatorDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CCE2022C69200291A7E /* ATMLocatorDetailController.swift */; };
+		B2F62CD12022C7D500291A7E /* ATMLocatorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CD02022C7D500291A7E /* ATMLocatorDetailViewModel.swift */; };
+		B2F62CD32022C8ED00291A7E /* JPMCInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2F62CD22022C8ED00291A7E /* JPMCInfo.plist */; };
+		B2F62CD62022DEEE00291A7E /* ATMLocatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F62CD52022DEEE00291A7E /* ATMLocatorExtensions.swift */; };
 		EE26A59A34581CFF91A7309A /* Pods_JPMCATMLocatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AD8F3F3B1848062A75898D /* Pods_JPMCATMLocatorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,10 @@
 		B2F62CC72022666F00291A7E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B2F62CC920226F2000291A7E /* ATMLocatorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorConstants.swift; sourceTree = "<group>"; };
 		B2F62CCB2022825700291A7E /* ATMLocatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorResponse.swift; sourceTree = "<group>"; };
+		B2F62CCE2022C69200291A7E /* ATMLocatorDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorDetailController.swift; sourceTree = "<group>"; };
+		B2F62CD02022C7D500291A7E /* ATMLocatorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorDetailViewModel.swift; sourceTree = "<group>"; };
+		B2F62CD22022C8ED00291A7E /* JPMCInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JPMCInfo.plist; sourceTree = "<group>"; };
+		B2F62CD52022DEEE00291A7E /* ATMLocatorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorExtensions.swift; sourceTree = "<group>"; };
 		DD8C0CA137567579586D4D7D /* Pods-JPMCATMLocatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocatorTests/Pods-JPMCATMLocatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		F290D9BCB7F384183909DCED /* Pods_JPMCATMLocatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPMCATMLocatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F5F82A49A6243792D030BE /* Pods-JPMCATMLocatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPMCATMLocatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPMCATMLocatorUITests/Pods-JPMCATMLocatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 				B2F62C852022356700291A7E /* Assets.xcassets */,
 				B2F62C872022356700291A7E /* LaunchScreen.storyboard */,
 				B2F62C8A2022356700291A7E /* Info.plist */,
+				B2F62CD22022C8ED00291A7E /* JPMCInfo.plist */,
 			);
 			path = JPMCATMLocator;
 			sourceTree = "<group>";
@@ -221,11 +230,11 @@
 		B2F62CBF202263C600291A7E /* locationServices */ = {
 			isa = PBXGroup;
 			children = (
+				B2F62CD42022DED100291A7E /* extensions */,
 				B2F62CC02022640900291A7E /* model */,
 				B2F62CC22022642B00291A7E /* view */,
 				B2F62CC12022641A00291A7E /* viewModel */,
 				B2F62CC62022649500291A7E /* util */,
-				B2F62CC52022648A00291A7E /* serviceInvoker */,
 			);
 			path = locationServices;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F62CBB2022629100291A7E /* ATMLocatorViewModel.swift */,
+				B2F62CD02022C7D500291A7E /* ATMLocatorDetailViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F62C802022356700291A7E /* ATMLocatorViewController.swift */,
+				B2F62CCE2022C69200291A7E /* ATMLocatorDetailController.swift */,
 				B2F62CC32022646100291A7E /* tableView */,
 				B2F62CC42022646C00291A7E /* tableViewCell */,
 			);
@@ -270,19 +281,20 @@
 			path = tableViewCell;
 			sourceTree = "<group>";
 		};
-		B2F62CC52022648A00291A7E /* serviceInvoker */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = serviceInvoker;
-			sourceTree = "<group>";
-		};
 		B2F62CC62022649500291A7E /* util */ = {
 			isa = PBXGroup;
 			children = (
 				B2F62CC920226F2000291A7E /* ATMLocatorConstants.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		B2F62CD42022DED100291A7E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2F62CD52022DEEE00291A7E /* ATMLocatorExtensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +438,7 @@
 			files = (
 				B2F62C892022356700291A7E /* LaunchScreen.storyboard in Resources */,
 				B2F62C862022356700291A7E /* Assets.xcassets in Resources */,
+				B2F62CD32022C8ED00291A7E /* JPMCInfo.plist in Resources */,
 				B2F62C842022356700291A7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,8 +617,11 @@
 			files = (
 				B2F62CBC2022629100291A7E /* ATMLocatorViewModel.swift in Sources */,
 				B2F62C812022356700291A7E /* ATMLocatorViewController.swift in Sources */,
+				B2F62CCF2022C69200291A7E /* ATMLocatorDetailController.swift in Sources */,
+				B2F62CD62022DEEE00291A7E /* ATMLocatorExtensions.swift in Sources */,
 				B2F62C7F2022356700291A7E /* AppDelegate.swift in Sources */,
 				B2F62CCC2022825700291A7E /* ATMLocatorResponse.swift in Sources */,
+				B2F62CD12022C7D500291A7E /* ATMLocatorDetailViewModel.swift in Sources */,
 				B2F62CCA20226F2000291A7E /* ATMLocatorConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
