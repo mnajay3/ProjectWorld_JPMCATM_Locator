@@ -9,7 +9,7 @@
 import Foundation
 
 extension UIApplication {
-    var statusBarView : UIView? {
+    public var statusBarView : UIView? {
         return value(forKey: "statusBar") as? UIView
     }
 }
