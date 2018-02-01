@@ -124,19 +124,39 @@ class ATMLocatorViewController: MasterViewController, CLLocationManagerDelegate,
     }
     
     //PRAGMARK:- DelegateMethods: GMSViewDelegate
-    //Triggers when user taps on the location title window on top of the marker
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+    //This method is responsible for navigating to the details screen when user taps on the marker(It doesn't show the title on the marker)
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         self.initializeSceneConfig(bundle: nil)
         if marker.title == CURRENT_LOCATION {
-            return
+            marker.title = CURRENT_LOCATION
+            return true
         }
-        guard let locations = self.viewModel.locationResponse?.locations else { return }
+        guard let locations = self.viewModel.locationResponse?.locations else { return true}
         for location in locations {
             if location.lat.toDouble() == marker.layer.latitude, location.lng.toDouble() == marker.layer.longitude {
                 (_destinationVC as! ATMLocatorDetailController).locatorDetail.location = location
             }
         }
         self.presentScene(bundle: nil)
+        return true
     }
+    /******************************************************************************************************
+    //Un-comment the follwoing if you want to display the title window on top of the marker and navigates to the details page when user tap on window
+     ******************************************************************************************************/
+    //Triggers when user taps on the location title window on top of the marker
+//    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+//        self.initializeSceneConfig(bundle: nil)
+//        if marker.title == CURRENT_LOCATION {
+//            return
+//        }
+//        guard let locations = self.viewModel.locationResponse?.locations else { return }
+//        for location in locations {
+//            if location.lat.toDouble() == marker.layer.latitude, location.lng.toDouble() == marker.layer.longitude {
+//                (_destinationVC as! ATMLocatorDetailController).locatorDetail.location = location
+//            }
+//        }
+//        self.presentScene(bundle: nil)
+//    }
+    
 }
 
