@@ -24,7 +24,7 @@ public class MasterTaskManagement {
     fileprivate static var sharedInstance = MasterTaskManagement()
     //Using URLSession for network call by passing url. It's a task management(multiThreading), excute the url in backgroung thread. Once we get the response(data, response, error). We have to handle it and get the Main thread to the top to update the User Interactive information.
     //All these activities are being done on background threads. Client has to make sure to update the userinterface related activities has to run on the mainthred
-    public func performTask(url: URL?, block:@escaping BLOCK, completion:@escaping (Data) -> ())
+    public func performTask(url: URL?, completion:@escaping (Data) -> ())
     {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
@@ -38,8 +38,17 @@ public class MasterTaskManagement {
                 print(error?.localizedDescription ?? "Error in Network Data")
                 return
             }
-                block()
                 completion(data)
             }.resume()
+    }
+    
+    //Pass the optional urlString and returns an URL if it could convert, nil if not
+    public func urlFromURLString(urlString: String?) -> URL? {
+        guard let urlString = urlString else {
+            print("url string is empty")
+            return nil
+        }
+        let url = URL(string: urlString)
+        return url
     }
 }
